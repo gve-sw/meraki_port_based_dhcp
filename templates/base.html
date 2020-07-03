@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="The design system sponsored by Cisco Brand">
+        <meta name="image" content="http://cisco-ui.cisco.com/assets/img/uikit-1200x630%402x.png">
+        <meta itemprop="name" content="Cisco UI Kit">
+        <meta itemprop="description" content="The design system sponsored by Cisco Brand">
+        <meta itemprop="image" content="http://cisco-ui.cisco.com">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Cisco UI Kit">
+        <meta name="twitter:description" content="The design system sponsored by Cisco Brand">
+        <meta property="og:title" content="Cisco UI Kit">
+        <meta property="og:description" content="The design system sponsored by Cisco Brand">
+        <meta property="og:image" content="https://cisco-ui.cisco.com/assets/img/uikit-1200x630%402x.png">
+        <meta property="og:url" content="http://cisco-ui.cisco.com">
+        <meta property="og:site_name" content="Cisco UI Kit">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ url_for('static',filename='img/apple-touch-icon.png') }}">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ url_for('static',filename='img/apple-touch-icon.png') }}">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url_for('static',filename='img/apple-touch-icon.png') }}">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url_for('static',filename='img/apple-touch-icon.png') }}">
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ url_for('static',filename='img/apple-touch-icon.png') }}">
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ url_for('static',filename='img/apple-touch-icon.png') }}">
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ url_for('static',filename='img/apple-touch-icon.png') }}">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ url_for('static',filename='img/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="128x128">
+        <link rel="icon" href="img/favicon.png" type="image/x-icon">
+        <meta name="application-name" content="Cisco UI Kit">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="img/mstile.png">
+        <meta name="msapplication-square70x70logo" content="img/mstile.png">
+        <meta name="msapplication-square150x150logo" content="img/mstile.png">
+        <meta name="msapplication-wide310x150logo" content="img/mstile.png">
+        <meta name="msapplication-square310x310logo" content="img/mstile.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+        <title>Port Based DHCP - Home</title>
+
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/cui-standard.min.css') }}">
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script src="../static/js/styleguide.js"></script>
+        <script type= text/javascript src="{{url_for('static',filename='js/button.js')}}"></script>
+
+
+    </head>
+
+    <body class="cui" data-theme="dark">
+        <nav class="header" id="styleguideheader" role="navigation">
+            <div class="container-fluid">
+                <div class="header-panels">
+                    <div class="header-panel hidden-md-down">
+                        <a class="header__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                        <h1 class="header__title">
+                            <span>Port Based DHCP</span>
+                        </h1>
+                    </div>
+                    <div class="header-panel header-panel--center base-margin-left base-margin-right hidden-lg-up">
+                        <a class="header__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                    </div>
+                    <div class="header-panel header-panel--right hidden-md-down">
+                        <a href="../" class="header-item" title="UI Kit Home"><span class="icon-home"></span></a>
+                        <div id="themeSwitcher" class="dropdown dropdown--left dropdown--offset-qtr header-item">
+                            <a class="header-toolbar__link">Theme</a>
+                            <div class="dropdown__menu">
+                                <a id="theme-default">Light</a>
+                                <a id="theme-dark" class="selected">Dark</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content content--alt">
+            <div class="container-fluid">
+                <div class="row">
+    
+                    <!-- Sidebar -->
+                    <nav class="col-lg-3 col-xl-2 sidebar hidden-md-down dbl-margin-top" role="navigation">
+                        <p></p>
+                        <ul id="rootSidebar">
+                            <li class="sidebar__item selected">
+                                <a tabindex="0" title="Initiate Device Capture" href="capture">
+                                    <span class="icon-devices"></span>
+                                    <span>Initiate Device Capture</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item selected">
+                                <a tabindex="0" title="Scan for New Devices" href="scan">
+                                    <span class="icon-display"></span>
+                                    <span>Scan for New Devices</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__item selected"">
+                                <a tabindex="0" title="Settings" href="settings">
+                                    <span class="icon-configurations"></span>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+
+        {% block content %}
+
+        {% endblock %}
+
+        </div>
+
+        <footer class="footer">
+            <div class="footer__links">
+                <ul class="list list--inline">
+                    <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+                    <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+                    <li><a href="https://www.cisco.com/c/en/us/about/help.html" target="_blank">Help</a></li>
+                    <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+                    <li><a href="https://www.cisco.com/c/en/us/about/legal/terms-conditions.html" target="_blank">Terms & Conditions</a></li></li>
+                    <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html" target="_blank">Privacy Statement</a></li>
+                    <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies" target="_blank">Cookie Policy</a></li>
+                    <li><a href="https://www.cisco.com/c/en/us/about/legal/trademarks.html" target="_blank">Trademarks</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    
+    <script type=text/javascript>
+        $(document).ready(function(){
+       
+        $('#org-select').change(function(){
+            $.ajax({
+                data :{
+                    org : $('#org-select').val(),
+                    select : '1'
+                },
+                type :'POST',
+                url : '/capture',
+                dataType : 'json'
+
+            })
+            .done(function(data){
+                var s = '<option value="-1">Select a Network</option>';             
+                console.log("returned data ", data);
+
+                for (var i = 0; i < data.length; i++) {  
+                   s += '<option value="' + data[i].id + '">' + data[i].name + '</option>';  
+                }  
+                $("#net-select").html(s);  
+
+            });
+        });
+        });
+    </script>
+
+    <script type=text/javascript>
+        $(document).ready(function(){
+        $('#net-select').change(function(e){
+            $.ajax({
+                data :{
+                    net : $('#net-select').val(),
+                    select : '2'
+                },
+                type :'POST',
+                url : '/capture',
+                dataType: 'json',
+            })
+            .done(function(data){
+                
+                if (data.error){
+                    $('#errorAlert').text(data.error).show();
+                }
+                else {
+                    $('#switchname').val(data.switch_name);
+                    $('#switchserial').val(data.switch_serial);
+                    $('#clientport').val(data.client_port);
+                    $('#clientoccurred').val(data.client_occurred);
+                    $('#network').val(data.network);
+                    console.log("returned data ", data);
+                }
+
+            });
+            e.preventDefault();
+        });
+        
+        });
+    </script>
+
+    <script type=text/javascript>
+        $(document).ready(function(){
+        $('#capture').submit(function(e){
+            $.ajax({
+                data :{
+                    swname : $('#switchname').val(),
+                    swserial : $('#switchserial').val(),
+                    clport : $('#clientport').val(),
+                    clocc : $('#clientoccurred').val(),
+                    netid : $('#network').val(),
+                    select : '3'
+                },
+                type :'POST',
+                url : '/capture',
+                dataType: 'json',
+            })
+            .done(function(data){
+
+                if (data.error){
+                    $('#errorAlert').text(data.error).show();
+                }
+                else {
+                    $('#swchname').text(data.switch_name).show();
+                    $('#swchserial').text(data.switch_serial).show();
+                    $('#clport').text(data.client_port).show();
+                    $('#cloccurred').text(data.client_occ).show();
+                    $('#cclip').text(data.cclient_ip).show();
+                    $('#newclip').text(data.newclient_ip).show();
+                    $('#cldnsname').text(data.client_dnsname).show();
+                    $('#cldescription').text(data.client_description).show();
+                    $("#clmac").text(data.client_mac).show();
+
+                    console.log("returned data ", data);
+                }
+            });
+            e.preventDefault();
+        });
+        
+        });
+    </script>
+    </body>
+</html>
+
+

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-12 col-lg-9 col-xl-10">
+    <div class="section">
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="panel panel--loose panel--raised base-margin-bottom">
+                    <h2 class="subtitle">Capture</h2>
+                    <hr>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="subheader">Organization
+                                    <form class="orgs" id="org">
+                                        <div class="form-group base-margin-bottom">
+                                            <div class="form-group__text select">
+                                                <select id="org-select" name="org-select">
+                                                    <option value="">Select an Organization</option>
+                                                    {% for org in orgs %}
+                                                    <option value="{{org.id}}">{{ org.name }} - ID {{ org.id }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="subheader">Network
+                                    <form class="nets" id="net">
+                                        <div class="form-group base-margin-bottom">
+                                            <div class="form-group__text select">
+                                                <select id="net-select" name="net-select">
+                                                    <option value="">Select a Network</option>
+                                                    {% for net in nets %}
+                                                    <option value="{net.id}">{{ net.name }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="subheader">Capture Device</div>
+                                <form class="capture" id="capture">
+                                    <input type=hidden id="switchname" name="switchname">
+                                    <input type=hidden id="switchserial" name="switchserial">
+                                    <input type=hidden id="clientport" name="clientport">
+                                    <input type=hidden id="clientoccurred" name="clientoccurred">
+                                    <input type=hidden id="network" name="network">
+                                    <br>
+                                    <button type= "submit" class="btn btn--secondary">Capture</button>
+                                </form>
+                                <br>
+                                <div class="alert alert-success" id="swchname" role="alert" style="display:none;"></div>
+                                <div class="alert alert-success" id="swchserial" role="alert" style="display:none;"></div>
+                                <div class="alert alert-success" id="cldnsname" role="alert" style="display:none;"></div>
+                                <div class="alert alert-success" id="cclip" role="alert" style="display:none;"></div>
+                                <div class="alert alert-success" id="newclip" role="alert" style="display:none;"></div>
+                                <div class="alert alert-success" id="clmac" role="alert" style="display:none;"></div>
+                                <div class="alert alert-success" id="clport" role="alert" style="display:none;"></div>
+                                <div class="alert alert-success" id="cldescription" role="alert" style="display:none;"></div>
+                                <div class="alert alert-success" id="cloccurred" role="alert" style="display:none;"></div>
+                                <div class="alert alert-danger" id="errorAlert" role="alert" style="display:none;"></div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

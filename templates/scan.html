@@ -1,0 +1,107 @@
+
+{% extends "base.html" %}
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+<div class="col-12 col-lg-9 col-xl-10">
+    <div class="section">
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="panel panel--loose panel--raised base-margin-bottom">
+                <form action="{{url_for('scan_post')}}" method='POST' id="form1">
+                        <div class="section">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="subheader">Organization
+                                        <form class="orgs" id="org">
+                                            <div class="form-group base-margin-bottom">
+                                                <div class="form-group__text select">
+                                                    <select id="org-select" name="org-select">
+                                                        <option value="">Select an Organization</option>
+                                                        {% for org in orgs %}
+                                                        <option value="{{org.id}}">{{ org.name }} - ID {{ org.id }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="subheader">Network
+                                        <div class="form-group base-margin-bottom">
+                                            <div class="form-group__text select">
+                                                <select id="net-select" name="net-select">
+                                                    <option value="">Select a Network</option>
+                                                    {% for net in nets %}
+                                                    <option value="{net.id}">{{ net.name }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div>
+                                <input type="hidden" id="code" name="code" value="1">
+                                <button class="btn btn--success">Scan all switch ports</button>
+                            </div>                           
+                        </div>
+                    </form>
+                    <form action="{{url_for('scan_post')}}" method='POST' id="form2">
+                        <input type="hidden" id="code" name="code" value="2">
+                        
+                        {% for port in ports %}
+                            <div class="section">
+                                <div class="row">
+                                    <div class = "col-xl-6">
+                                    <p>Device Name: {{port.device_name}}</p>
+                                    </div>
+                                    <div class = "col-xl-6">
+                                        <label class="checkbox">
+                                            <input type="checkbox" value='{{port.number}}|{{port.port_tag}}|{{port.client_mac}}|{{port.client_ip}}|{{port.vlan}}|{{port.network_id}}|{{port.serial}}' name="port" class="hover">
+                                            <span class="checkbox__input"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class = "col-xl-6">
+                                        <p>Port number: {{port.number}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class = "col-xl-6">
+                                        <p>Port tag: {{port.port_tag}}</p> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class = "col-xl-6">
+                                        <p>DHCP Hostname: {{port.client}}</p> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class = "col-xl-6">
+                                        <p>client ip: {{port.client_ip}}</p>
+                                    </div>
+                                </div>                        
+                            </div>
+                        {% endfor %}
+                        <div class="section">
+                            <button type='submit' class="btn btn--secondary" hidden id="scan_button">Confirm</button>
+                        </div>
+                    </form>
+                        {% for client in clients %}
+                        <div class="section">
+                        </div>
+                        {% endfor %}
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

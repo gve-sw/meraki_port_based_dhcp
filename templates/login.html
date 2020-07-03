@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-12 col-lg-9 col-xl-10">
+    <div class="section">
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="panel panel--loose panel--raised base-margin-bottom">
+                    <h2 class="subtitle">Login</h2>
+                    <hr>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-lg-3"></div>
+                            <div class="col-md-6">
+                            <!-- Middle Rail -->
+                                <div class="panel panel--loose panel--raised base-margin-bottom">
+                                        <h6>Please enter Meraki and Webex settings</h6>
+                                        <form action="/apikey" method="POST" name="capture">
+                                            <input type="hidden" name="code" value="1">
+                                            Meraki API Key: <input type="text" name="key">
+                                            <br><br>
+
+                                        <form action="/apikey" method="POST" name="capture">
+                                            <input type="hidden" name="code" value="1">
+                                            Webex Bot Key: <input type="text" name="botkey">
+                                                <br><br>
+                                        
+                                        <form action="/apikey" method="POST" name="capture">
+                                            <input type="hidden" name="code" value="1">
+                                            Webex Room ID: <input type="text" name="roomid">
+                                                <br><br>
+                                            <button class="btn btn--secondary" type="submit" value="Submit"> Submit</button>
+                                        </form>
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
