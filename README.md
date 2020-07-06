@@ -1,8 +1,5 @@
 # Meraki Port Based DHCP
 
-| :exclamation:  External repository notice   |
-|:---------------------------|
-| This repository is now mirrored at "PLEASE UPDATE HERE - add External repo URL after code review is completed"  Please inform a https://github.com/gve-sw/ organization admin of any changes to mirror them to the external repo |
 
 A customer is looking for an IOS feature called DHCP Server Port-Based Address Allocation.  This feature allows the user to preassign an IP address to a port from the DHCP pool.  Once a device is pulled into the port, the device will get the assigned IP address.  
 
