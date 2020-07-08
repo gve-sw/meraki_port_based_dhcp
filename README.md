@@ -24,7 +24,7 @@ Option 1:
 1. Pull down the project into a python virtual environment
 
 ```
-git clone https://wwwin-github.cisco.com/gve/meraki_port_based_dhcp.git
+git clone https://github.com/gve-sw/meraki_port_based_dhcp.git
 ```
 
 2. Install required packages
@@ -45,7 +45,7 @@ Option 2:
 
 2. Pull down the project
 ```
-git clone https://wwwin-github.cisco.com/gve/meraki_port_based_dhcp.git
+git clone https://github.com/gve-sw/meraki_port_based_dhcp.git
 ```
 
 3. Build the project Docker image
