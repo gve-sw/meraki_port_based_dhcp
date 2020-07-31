@@ -1,7 +1,7 @@
 # Meraki Port Based DHCP
 
 
-A customer is looking for an IOS feature called DHCP Server Port-Based Address Allocation.  This feature allows the user to preassign an IP address to a port from the DHCP pool.  Once a device is pulled into the port, the device will get the assigned IP address.  
+A customer is looking for an IOS feature called DHCP Server Port-Based Address Allocation.  This feature allows the user to preassign an IP address to a port from the DHCP pool.  Once a device is plugged into the port, the device will get the assigned IP address.  
 
 Our project uses the following logic flow to simulate the same feature on the Meraki platform utilizing the Dashboard APIs.
 
